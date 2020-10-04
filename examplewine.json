@@ -6,7 +6,7 @@
   "mark": "line",
   "encoding": {
     "x": {
-      "field": "alcohol"
+      "field": "alcohol", "type":"quantitative"
     },
     "y": {
       "aggregate": "mean",
