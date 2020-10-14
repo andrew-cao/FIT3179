@@ -1,4 +1,4 @@
-﻿Country,Adult literacy rate,CO2 emissions per capita,Electricity power consumption (kWh per capita),GDP per capita,Infant mortality rate (per 1000 births),Urban population percentage,Life expectancy,Net migration,Population,HDI
+﻿Country,literacy,co2,elec_consump,gdppc,inf_mort,urban_pop,le,migration,pop,hdi
 Afghanistan,43.01972,0.245101422,,502.1154869,46.5,25.754,64.486,-314602,37172386,0.496
 Albania,98.14115,1.577162624,2309.366503,5352.857411,8.6,61.229,78.458,-69998,2866376,0.791
 Algeria,81.40784,3.69915599,1362.871919,3948.343279,20,73.189,76.693,-50002,42228429,0.759
