@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 500,
+  "title": "Infant mortality (per 1000 births)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
+  },
+  "transform": [{"filter": "datum.inf_mort > 0 & datum.life_expectancy > 0"}],
+  "layer": [
+    {
+      "mark": {"type": "circle", "color": "#7D3300"},
+      "encoding": {
+        "x": {
+          "field": "inf_mort",
+          "title": "Infant mortality (per 1000 births, log scale)",
+          "type": "quantitative",
+          "scale": {"type": "log"},
+          "axis": {"grid": false}
+        },
+        "y": {
+          "field": "life_expectancy",
+          "title": "Life expectancy",
+          "type": "quantitative",
+          "axis": {"grid": false}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "life_expectancy",
+            "title": "Life expectancy",
+            "type": "quantitative"
+          },
+          {
+            "field": "inf_mort",
+            "title": "Infant mortality",
+            "type": "quantitative"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

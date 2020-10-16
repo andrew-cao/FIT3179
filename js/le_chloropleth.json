@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 1200,
+  "height": 800,
+  "title": "Life expectancy",
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/world.topo.json",
+    "format": {"type": "topojson", "feature": "custom"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
+        },
+        "key": "Country",
+        "fields": ["life_expectancy"]
+      }
+    }
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "condition": {"test": "datum.life_expectancy == 0", "value": "grey"},
+      "field": "life_expectancy",
+      "title": "Life expectancy",
+      "type": "quantitative",
+      "scale": {"type": "linear", "scheme": "lightorange"}
+    },
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "Country"},
+      {
+        "field": "life_expectancy",
+        "title": "Life expectancy",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "config": {}
+}

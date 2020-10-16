@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 500,
+  "title": "Net migration (% population)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.net_migration_percent >= 0 & datum.life_expectancy > 0"
+        }
+      ],
+      "mark": {"type": "circle", "color": "steelblue"},
+      "encoding": {
+        "x": {
+          "field": "net_migration_percent",
+          "title": "Net migration (% population)",
+          "type": "quantitative",
+          "scale": {"type": "linear"},
+          "axis": {"grid": false}
+        },
+        "y": {
+          "field": "life_expectancy",
+          "title": "Life expectancy",
+          "type": "quantitative",
+          "axis": {"grid": false}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "life_expectancy",
+            "title": "Life expectancy",
+            "type": "quantitative"
+          },
+          {
+            "field": "net_migration_percent",
+            "title": "Net migration",
+            "type": "quantitative"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.net_migration_percent < 0 & datum.life_expectancy > 0"
+        }
+      ],
+      "mark": {"type": "circle", "color": "orange"},
+      "encoding": {
+        "x": {
+          "field": "net_migration_percent",
+          "title": "Net migration (% population)",
+          "type": "quantitative",
+          "scale": {"type": "linear"},
+          "axis": {"grid": false}
+        },
+        "y": {
+          "field": "life_expectancy",
+          "title": "Life expectancy",
+          "type": "quantitative",
+          "axis": {"grid": false}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "life_expectancy",
+            "title": "Life expectancy",
+            "type": "quantitative"
+          },
+          {
+            "field": "net_migration_percent",
+            "title": "Net migration",
+            "type": "quantitative"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

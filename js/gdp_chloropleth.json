@@ -1,0 +1,43 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 500,
+  "title": "Gross Domestic Product (per capita, $US)",
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/world.topo.json",
+    "format": {"type": "topojson", "feature": "custom"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
+        },
+        "key": "Country",
+        "fields": ["gdppc", "life_expectancy"]
+      }
+    }
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "condition": {"test": "datum.gdppc == 0", "value": "grey"},
+      "field": "gdppc",
+      "title": "GDP per capita",
+      "type": "quantitative",
+      "scale": {"type": "log", "scheme": "purples"}
+    },
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "Country"},
+      {
+        "field": "life_expectancy",
+        "title": "Life expectancy",
+        "type": "quantitative"
+      },
+      {"field": "gdppc", "title": "GDP per capita", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}

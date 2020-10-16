@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 500,
+  "title": "Gross Domestic Product (per capita, $US)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
+  },
+  "transform": [{"filter": "datum.gdppc > 0 & datum.life_expectancy > 0"}],
+  "layer": [
+    {
+      "mark": {"type": "circle", "color": "purple"},
+      "encoding": {
+        "x": {
+          "field": "gdppc",
+          "title": "Gross Domestic Product (per capita, $US, log scale)",
+          "type": "quantitative",
+          "scale": {"type": "log"},
+          "axis": {"grid": false}
+        },
+        "y": {
+          "field": "life_expectancy",
+          "title": "Life expectancy",
+          "type": "quantitative",
+          "axis": {"grid": false}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "life_expectancy",
+            "title": "Life expectancy",
+            "type": "quantitative"
+          },
+          {"field": "gdppc", "title": "GDP per capita", "type": "quantitative"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
