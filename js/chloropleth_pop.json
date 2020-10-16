@@ -3,15 +3,10 @@
   "width": 800,
   "height": 500,
   "title": "World population 2019",
-  "projection": {
-    "type": "equalEarth"
-  },
+  "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/world.topo.json",
-    "format": {
-      "type": "topojson",
-      "feature": "custom"
-    }
+    "format": {"type": "topojson", "feature": "custom"}
   },
   "transform": [
     {
@@ -21,33 +16,21 @@
           "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
         },
         "key": "Country",
-        "fields": [
-          "Population"
-        ]
+        "fields": ["pop"]
       }
     }
   ],
-  "mark": {
-    "type": "geoshape"
-  },
+  "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Population",
+      "field": "pop",
+      "title": "Population",
       "type": "quantitative",
-      "scale": {
-        "type": "log"
-      }
+      "scale": {"type": "log"}
     },
     "tooltip": [
-      {
-        "field": "properties.name",
-        "type": "nominal",
-        "title": "Country"
-      },
-      {
-        "field": "Population",
-        "type": "quantitative"
-      }
+      {"field": "properties.name", "type": "nominal", "title": "Country"},
+      {"field": "pop", "title": "Population", "type": "quantitative"}
     ]
   },
   "config": {}
