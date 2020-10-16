@@ -1,4 +1,4 @@
-function openCity(evt, cityName) {
+function openChart(evt, name) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
