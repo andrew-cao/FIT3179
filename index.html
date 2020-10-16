@@ -6,14 +6,26 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  <title> Week 9 Homework - Andrew Cao </title>
+  <title> Life expectancy factors </title>
 </head>
 <body>
 
 <div id="vis"></div>
 
+<p1>
+What affects life expectancy around the world?
+</p1>
+
+<p2>
+A visualisation by Andrew Cao
+</p2>
+  
+<p3>
+Click on the filters below to choose which factors to visualise.
+</p3>
+  
 <script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/chloropleth_pop.json";
+  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/le_chloropleth.json";
   vegaEmbed('#vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
