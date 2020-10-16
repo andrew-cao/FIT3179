@@ -12,6 +12,6 @@ function openChart(evt, name) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(name).style.display = "block";
   evt.currentTarget.className += " active";
 } 
