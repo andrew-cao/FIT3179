@@ -9,7 +9,7 @@
   "transform": [{"filter": "datum.inf_mort > 0 & datum.life_expectancy > 0"}],
   "layer": [
     {
-      "mark": {"type": "circle", "color": "#7D3300"},
+      "mark": {"type": "circle", "color": "#AE7318"},
       "encoding": {
         "x": {
           "field": "inf_mort",
