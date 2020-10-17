@@ -18,6 +18,13 @@ font-size: 3;
   width: 50em
 }
 
+.b {
+float:left;
+}
+
+.c {
+float:right;
+}
 
 .tab {
   overflow: hidden;
