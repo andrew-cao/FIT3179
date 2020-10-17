@@ -34,14 +34,14 @@ font-size: 4;
 
 .left {
   float:left;
-  max-width=50%;
+  max-width:50%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .right {
   float:right;
-    max-width=50%;
+  max-width:50%;
   margin-left: auto;
   margin-right: auto;
 }
