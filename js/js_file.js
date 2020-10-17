@@ -18,7 +18,7 @@ function openMap(evt, name) {
 function openChart(evt, name) {
   var j, tabcontent2, tablinks2;
 
-  tabcontent2 = document.getElementsByClassName("tabcontent");
+  tabcontent2 = document.getElementsByClassName("tabcontent2");
   for (j = 0; j < tabcontent2.length; j++) {
     tabcontent2[j].style.display = "none";
   }
