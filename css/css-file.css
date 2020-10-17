@@ -19,13 +19,22 @@ font-size: 3;
 }
 
 .b {
-float:left;
-text-align: center;
 }
 
 .c {
-float:right;
 text-align: center;
+}
+
+.d {
+text-align: center;
+}
+
+.left {
+float:left;
+}
+
+.right {
+float:right;
 }
 
 .tab {
