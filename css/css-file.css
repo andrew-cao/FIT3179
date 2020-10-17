@@ -20,10 +20,12 @@ font-size: 3;
 
 .b {
 float:left;
+text-align: center;
 }
 
 .c {
 float:right;
+text-align: center;
 }
 
 .tab {
