@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 300,
+  "title": "Population",
+  "data": {
+    "url": "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/data/dataset.csv"
+  },
+  "transform": [{"filter": "datum.pop > 0 & datum.life_expectancy > 0"}],
+  "layer": [
+    {
+      "mark": {"type": "circle", "color": "teal"},
+      "encoding": {
+        "x": {
+          "field": "pop",
+          "title": "Population (log scale)",
+          "type": "quantitative",
+          "scale": {"type": "log"},
+          "axis": {"grid": false}
+        },
+        "y": {
+          "field": "life_expectancy",
+          "title": "Life expectancy",
+          "type": "quantitative",
+          "axis": {"grid": false}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "life_expectancy",
+            "title": "Life expectancy",
+            "type": "quantitative"
+          },
+          {"field": "pop", "title": "Population", "type": "quantitative"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
