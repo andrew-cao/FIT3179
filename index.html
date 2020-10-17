@@ -149,12 +149,27 @@ A visualisation by Andrew Cao<br>
   <div class="right">
     <div class="d">
       <p4>
-         Filter scatterplots:
+       Filter scatterplots:
       </p4>
     </div>
     
-    
-    
+    <div class="tab">
+      <button class="tablinks" onclick="openChart(event, 'Population_scatter')"id="defaultOpen">Population</button>
+    </div>
+
+<div id="Population_scatter" class="tabcontent">
+  <div id = "vis_pop_sca"></div>
+</div>
+
+  
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/pop_scatter.json";
+  vegaEmbed('#vis_pop_sca', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+  
+ 
   </div>
 </div>
   
