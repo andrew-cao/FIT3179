@@ -31,31 +31,23 @@ A visualisation by Andrew Cao<br>
   
 <div class="b">
   
-<p3>
-Filter chloropleth maps:
-</p3>
-
-</div>
+  <div class="left">
+    <div class="c">
+    <p3>
+    Filter chloropleth maps:
+    </p3>
+    </div>
   
-<div class="c">
-  
-<p4>
-Filter scatterplots:
-  <br>
-</p4>
-  
-</div>
-  
-<div class="tab">
-  <button class="tablinks" onclick="openChart(event, 'Population')"id="defaultOpen">Population</button>
-  <button class="tablinks" onclick="openChart(event, 'GDP per capita')">GDP per capita</button>
-  <button class="tablinks" onclick="openChart(event, 'HDI')">HDI</button>
-  <button class="tablinks" onclick="openChart(event, 'Migration')">Migration</button>
-  <button class="tablinks" onclick="openChart(event, 'Infant mortality')">Infant mortality</button>
-  <button class="tablinks" onclick="openChart(event, 'CO2 emissions')">CO2 emissons</button>
-  <button class="tablinks" onclick="openChart(event, 'Power consumption')">Power consumption</button>
-  <button class="tablinks" onclick="openChart(event, 'Urban population')">Urban population</button>
-</div>
+    <div class="tab">
+      <button class="tablinks" onclick="openChart(event, 'Population')"id="defaultOpen">Population</button>
+      <button class="tablinks" onclick="openChart(event, 'GDP per capita')">GDP per capita</button>
+      <button class="tablinks" onclick="openChart(event, 'HDI')">HDI</button>
+      <button class="tablinks" onclick="openChart(event, 'Migration')">Migration</button>
+      <button class="tablinks" onclick="openChart(event, 'Infant mortality')">Infant mortality</button>
+      <button class="tablinks" onclick="openChart(event, 'CO2 emissions')">CO2 emissons</button>
+      <button class="tablinks" onclick="openChart(event, 'Power consumption')">Power consumption</button>
+      <button class="tablinks" onclick="openChart(event, 'Urban population')">Urban population</button>
+    </div>
 
 <div id="Population" class="tabcontent">
   <div id = "vis_pop_chl"></div>
@@ -151,6 +143,21 @@ Filter scatterplots:
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
+  
+  </div>
+  
+  <div class="right">
+    <div class="d">
+      <p4>
+         Filter scatterplots:
+      <br>
+      </p4>
+    </div>
+    
+    
+    
+  </div>
+</div>
   
 </body>
 </html>
