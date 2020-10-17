@@ -11,7 +11,7 @@
   ],
   "layer": [
     {
-      "mark": {"type": "circle", "color": "#eac817"},
+      "mark": {"type": "circle", "color": "#907b0e"},
       "encoding": {
         "x": {
           "field": "power_consumption",
