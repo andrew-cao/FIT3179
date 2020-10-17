@@ -39,7 +39,8 @@ font-size: 4;
 
 .tab button {
   background-color: inherit;
-  float: left;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   outline: none;
   cursor: pointer;
