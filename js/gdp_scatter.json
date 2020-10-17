@@ -9,7 +9,7 @@
   "transform": [{"filter": "datum.gdppc > 0 & datum.life_expectancy > 0"}],
   "layer": [
     {
-      "mark": {"type": "circle", "color": "purple"},
+      "mark": {"type": "circle", "color": "#4B0082"},
       "encoding": {
         "x": {
           "field": "gdppc",
