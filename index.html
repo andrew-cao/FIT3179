@@ -30,24 +30,21 @@ A visualisation by Andrew Cao<br>
 </div>
   
 <div class="b">
+  <p3>
+  Filter chloropleth maps:
+  </p3>
+</div>
   
-  <div class="left">
-    <div class="c">
-    <p3>
-    Filter chloropleth maps:
-    </p3>
-    </div>
-  
-    <div class="tab">
-      <button class="tablinks" onclick="openMap(event, 'Population')"id="defaultOpen">Population</button>
-      <button class="tablinks" onclick="openMap(event, 'GDP per capita')">GDP per capita</button>
-      <button class="tablinks" onclick="openMap(event, 'HDI')">HDI</button>
-      <button class="tablinks" onclick="openMap(event, 'Migration')">Migration</button>
-      <button class="tablinks" onclick="openMap(event, 'Infant mortality')">Infant mortality</button>
-      <button class="tablinks" onclick="openMap(event, 'CO2 emissions')">CO2 emissons</button>
-      <button class="tablinks" onclick="openMap(event, 'Power consumption')">Power consumption</button>
-      <button class="tablinks" onclick="openMap(event, 'Urban population')">Urban population</button>
-    </div>
+<div class="tab">
+  <button class="tablinks" onclick="openMap(event, 'Population')"id="defaultOpen">Population</button>
+  <button class="tablinks" onclick="openMap(event, 'GDP per capita')">GDP per capita</button>
+  <button class="tablinks" onclick="openMap(event, 'HDI')">HDI</button>
+  <button class="tablinks" onclick="openMap(event, 'Migration')">Migration</button>
+  <button class="tablinks" onclick="openMap(event, 'Infant mortality')">Infant mortality</button>
+  <button class="tablinks" onclick="openMap(event, 'CO2 emissions')">CO2 emissons</button>
+  <button class="tablinks" onclick="openMap(event, 'Power consumption')">Power consumption</button>
+  <button class="tablinks" onclick="openMap(event, 'Urban population')">Urban population</button>
+</div>
 
 <div id="Population" class="tabcontent">
   <div id = "vis_pop_chl"></div>
@@ -144,26 +141,23 @@ A visualisation by Andrew Cao<br>
   }).catch(console.error);
 </script>
   
-  </div>
-  
-  <div class="right">
-    <div class="d">
-      <p4>
-       Filter scatterplots:
-      </p4>
-    </div>
+<div class="c">
+  <p4>
+   Filter scatterplots:
+  </p4>
+</div>
     
-    <div class="tab">
-      <button class="tablinks2" onclick="openChart(event, 'Population_scatter')"id="defaultOpen2">Population</button>
-      <button class="tablinks2" onclick="openChart(event, 'GDP_scatter')">GDP per capita</button>
-      <button class="tablinks2" onclick="openChart(event, 'HDI_scatter')">HDI</button>
-      <button class="tablinks2" onclick="openChart(event, 'Migration_scatter')">Migration</button>
-      <button class="tablinks2" onclick="openChart(event, 'Infmort_scatter')">Infant mortality</button>
-      <button class="tablinks2" onclick="openChart(event, 'CO2_scatter')">CO2 emissions</button>
-      <button class="tablinks2" onclick="openChart(event, 'Power_scatter')">Power consumption</button>
-      <button class="tablinks2" onclick="openChart(event, 'Urban_scatter')">Urban population</button>
-      <button class="tablinks2" onclick="openChart(event, 'Literacy_scatter')">Adult literacy rate</button>
-    </div>
+<div class="tab">
+  <button class="tablinks2" onclick="openChart(event, 'Population_scatter')"id="defaultOpen2">Population</button>
+  <button class="tablinks2" onclick="openChart(event, 'GDP_scatter')">GDP per capita</button>
+  <button class="tablinks2" onclick="openChart(event, 'HDI_scatter')">HDI</button>
+  <button class="tablinks2" onclick="openChart(event, 'Migration_scatter')">Migration</button>
+  <button class="tablinks2" onclick="openChart(event, 'Infmort_scatter')">Infant mortality</button>
+  <button class="tablinks2" onclick="openChart(event, 'CO2_scatter')">CO2 emissions</button>
+  <button class="tablinks2" onclick="openChart(event, 'Power_scatter')">Power consumption</button>
+  <button class="tablinks2" onclick="openChart(event, 'Urban_scatter')">Urban population</button>
+  <button class="tablinks2" onclick="openChart(event, 'Literacy_scatter')">Adult literacy rate</button>
+</div>
 
 <div id="Population_scatter" class="tabcontent2">
   <div id = "vis_pop_sca"></div>
@@ -263,9 +257,7 @@ A visualisation by Andrew Cao<br>
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
-    
-  </div>
-</div>
+   
   
 </body>
 </html>
