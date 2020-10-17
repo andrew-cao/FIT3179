@@ -14,7 +14,6 @@ font-size: 4;
 
 
 .a {
-  display:flex;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -25,13 +24,11 @@ font-size: 4;
 }
 
 .c {
-  display:flex;
   text-align: center;
   padding-bottom: 15px;
 }
 
 .d {
-  display:flex;
   text-align: center;
   padding-bottom: 15px;
 
