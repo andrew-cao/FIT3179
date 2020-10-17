@@ -10,6 +10,10 @@ p2 {
 
 }
 
+div {
+align-context:center;
+}
+
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
@@ -41,6 +45,3 @@ p2 {
   border-top: none;
 }
 
-.center {
-  align-items: center;
-}
