@@ -28,6 +28,11 @@ A visualisation by Andrew Cao<br>
   <button class="tablinks" onclick="openChart(event, 'Population')"id="defaultOpen">Population</button>
   <button class="tablinks" onclick="openChart(event, 'GDP per capita')">GDP per capita</button>
   <button class="tablinks" onclick="openChart(event, 'HDI')">HDI</button>
+  <button class="tablinks" onclick="openChart(event, 'Migration')">Migration</button>
+  <button class="tablinks" onclick="openChart(event, 'Infant mortality')">Infant mortality</button>
+  <button class="tablinks" onclick="openChart(event, 'CO2 emissions')">CO2 emissons</button>
+  <button class="tablinks" onclick="openChart(event, 'Power consumption')">Power consumption</button>
+  <button class="tablinks" onclick="openChart(event, 'Urban population')">Urban population</button>
 </div>
 
 <div id="Population" class="tabcontent">
@@ -40,6 +45,26 @@ A visualisation by Andrew Cao<br>
 
 <div id="HDI" class="tabcontent">
     <div id = "vis_hdi_chl"></div>
+</div> 
+  
+<div id="Migration" class="tabcontent">
+    <div id = "vis_mig_chl"></div>
+</div> 
+  
+<div id="Infant mortality" class="tabcontent">
+    <div id = "vis_inf_chl"></div>
+</div> 
+  
+<div id="CO2 emissions" class="tabcontent">
+    <div id = "vis_co2_chl"></div>
+</div> 
+  
+<div id="Power consumption" class="tabcontent">
+    <div id = "vis_pow_chl"></div>
+</div> 
+  
+<div id="Urban population" class="tabcontent">
+    <div id = "vis_urb_chl"></div>
 </div> 
   
 <script type="text/javascript">
@@ -66,6 +91,41 @@ A visualisation by Andrew Cao<br>
 <script type="text/javascript">
   var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/hdi_chloropleth.json";
   vegaEmbed('#vis_hdi_chl', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+  
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/migration_chloropleth.json";
+  vegaEmbed('#vis_mig_chl', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+  
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/infmort_chloropleth.json";
+  vegaEmbed('#vis_inf_chl', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+  
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/co2_chloropleth.json";
+  vegaEmbed('#vis_co2_chl', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+  
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/power_chloropleth.json";
+  vegaEmbed('#vis_pow_chl', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+  
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/urbanpop_chloropleth.json";
+  vegaEmbed('#vis_urb_chl', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
