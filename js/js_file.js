@@ -33,3 +33,4 @@ function openChart(evt, name) {
 } 
 
 document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen2").click();
