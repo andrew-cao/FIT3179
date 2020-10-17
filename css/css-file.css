@@ -22,14 +22,12 @@ font-size: 4;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 15px;
 }
 
 .c {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 15px;
 }
 
 .tab {
@@ -46,7 +44,6 @@ font-size: 4;
   outline: none;
   cursor: pointer;
   padding: 10px 12px;
-  max-width: 60px;
   transition: 0.3s;
 }
 
@@ -63,6 +60,8 @@ font-size: 4;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tabcontent2 {
@@ -70,4 +69,6 @@ font-size: 4;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  margin-left: auto;
+  margin-right: auto;
 }
