@@ -1,74 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  <link rel="stylesheet" href="https://andrew-cao.github.io/FIT3179/css/css-file.css">
-  <script src = "https://andrew-cao.github.io/FIT3179/js/js_file.js" defer></script>
-  <title> Life expectancy factors </title>
+  <title> Week 9 Homework - Andrew Cao </title>
 </head>
 <body>
 
-<h1 style="text-align:center;">
-What affects life expectancy around the world?
-</h1>
-
-<h2 style="text-align:center;">
-<br>A visualisation by Andrew Cao
-</h2>
-  
 <div id="vis"></div>
-  
-<p1>
-<br>Click on the filters below to choose which factors to visualise.
-</p1>
-  
-<div class="tab">
-  <button class="tablinks" onclick="openChart(event, 'Population')"id="defaultOpen">Population</button>
-  <button class="tablinks" onclick="openChart(event, 'GDP per capita')">GDP per capita</button>
-  <button class="tablinks" onclick="openChart(event, 'HDI')">HDI</button>
-</div>
 
-<div id="Population" class="tabcontent">
-  <div id = "vis_pop_chl"></div>
-</div>
-
-<div id="GDP per capita" class="tabcontent">
-    <div id = "vis_gdp_chl"></div>
-</div>
-
-<div id="HDI" class="tabcontent">
-    <div id = "vis_hdi_chl"></div>
-</div> 
-  
 <script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/le_chloropleth.json";
+  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/chloropleth_pop.json";
   vegaEmbed('#vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
-  
-<script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/pop_chloropleth.json";
-  vegaEmbed('#vis_pop_chl', spec).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
-  
-<script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/gdp_chloropleth.json";
-  vegaEmbed('#vis_gdp_chl', spec).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
-  
-<script type="text/javascript">
-  var spec = "https://raw.githubusercontent.com/andrew-cao/FIT3179/main/js/hdi_chloropleth.json";
-  vegaEmbed('#vis_hdi_chl', spec).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
-  
 </body>
 </html>
